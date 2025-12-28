@@ -62,9 +62,8 @@ app.post('/api/dang-ky', (req, res) => {
     });
 });
 
-const PORT = 5000;
-// Thêm '0.0.0.0' để server chấp nhận mọi kết nối từ localhost và 127.0.0.1
-app.listen(PORT, '0.0.0.0', () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
     console.log(`🚀 Server đang chạy tại cổng ${PORT}`);
-
 });
+
