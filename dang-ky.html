@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Phim Minions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header - Phần đầu trang -->
+    <div class="phan-dau">
+        <div class="logo">
+            <h1>🎬 Tâyisme.Film</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="phim.html">Danh Sách Phim</a></li>
+                <li><a href="lien-he.html">Liên Hệ</a></li>
+                <li id="menu-user"><a href="dang-nhap.html">Đăng Nhập</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Trang Đăng Ký -->
+    <section class="trang-dang-ky">
+        <div class="form-dang-ky">
+            <h2 class="tieu-de">Đăng Ký Tài Khoản</h2>
+            
+            <!-- Thông báo đăng ký -->
+            <div id="thong-bao" class="thong-bao"></div>
+            
+            <form id="form-dang-ky" onsubmit="xuLyDangKy(event)">
+                <div class="nhom-nhap">
+                    <label for="ho-ten">Họ và tên:</label>
+                    <input type="text" id="ho-ten" name="ho-ten" required placeholder="Nhập họ tên">
+                </div>
+
+                <div class="nhom-nhap">
+                    <label for="tai-khoan">Tài khoản:</label>
+                    <input type="text" id="tai-khoan" name="tai-khoan" required placeholder="Nhập tài khoản">
+                </div>
+
+                <div class="nhom-nhap">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Nhập email">
+                </div>
+
+                <div class="nhom-nhap">
+                    <label for="mat-khau">Mật khẩu:</label>
+                    <input type="password" id="mat-khau" name="mat-khau" required placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="nhom-nhap">
+                    <label for="nhap-lai-mat-khau">Nhập lại mật khẩu:</label>
+                    <input type="password" id="nhap-lai-mat-khau" name="nhap-lai-mat-khau" required placeholder="Nhập lại mật khẩu">
+                </div>
+
+                <div class="nhom-nhap">
+                    <label for="ngay-sinh">
+                        <input type="checkbox" id="ngay-sinh" name="ngay-sinh">
+                        Tôi đã đủ 18 tuổi
+                    </label>
+                </div>
+
+                <button type="submit" class="nut-dang-ky">Đăng Ký</button>
+            </form>
+
+            <div class="link-dang-nhap">
+                <p>Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Phần chân trang -->
+    <footer class="chan-trang">
+        <p>&copy; 2025 Phim Minions. Tất cả quyền được bảo lưu.</p>
+        <p>Website được tạo ra cho mục đích học tập và kiểm thử phần mềm.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

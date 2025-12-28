@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Phim Minions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header - Phần đầu trang -->
+    <div class="phan-dau">
+        <div class="logo">
+            <h1>🎬 Tâyisme.Film</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="phim.html">Danh Sách Phim</a></li>
+                <li><a href="lien-he.html">Liên Hệ</a></li>
+                <li id="menu-user"><a href="dang-nhap.html">Đăng Nhập</a></li>
+                <div id="user-info" class="user-nav">
+    <a href="dang-nhap.html">Đăng nhập</a> | <a href="dang-ky.html">Đăng ký</a>
+</div>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Danh Sách Phim -->
+    <section class="danh-sach-phim">
+        <h2 class="tieu-de">Danh Sách Phim Minions</h2>
+        
+        <!-- Lọc Phim -->
+        <div class="bo-loc">
+            <label for="loc-theo-nam">Lọc theo năm:</label>
+            <select id="loc-theo-nam" onchange="locPhim()">
+                <option value="tat-ca">Tất cả</option>
+                <option value="2015">2015</option>
+                <option value="2022">2022</option>
+                <option value="2022">202</option>
+            </select>
+            
+            <label for="tim-kiem">Tìm kiếm:</label>
+            <input type="text" id="tim-kiem" placeholder="Nhập tên phim..." onkeyup="timKiemPhim()">
+        </div>
+
+        <div id="danh-sach-phim" class="danh-sach">
+            <!-- Phim 1 -->
+            <div class="the-phim" data-nam="2025">
+                <img src="1.jpg" alt="Minions 1" class="anh-phim">
+                <div class="thong-tin-phim">
+                    <h3 class="ten-phim">Minions 1 (2015)</h3>
+                    <p class="nam-phim">Năm: 2015</p>
+                    <p class="thoi-luong">Thời lượng: 91 phút</p>
+                    <p class="the-loai">Thể loại: Hoạt hình, Hài hước</p>
+                    <a href="https://www.youtube.com/watch?v=SFbwRmsDxdU&t=375s" class="nut-xem">Xem Phim</a>
+                </div>
+            </div>
+
+            <!-- Phim 2 -->
+            <div class="the-phim" data-nam="2022">
+                <img src="2.jpg" alt="Minions 2" class="anh-phim">
+                <div class="thong-tin-phim">
+                    <h3 class="ten-phim">Minions 2 (2022)</h3>
+                    <p class="nam-phim">Năm: 2022</p>
+                    <p class="thoi-luong">Thời lượng: 87 phút</p>
+                    <p class="the-loai">Thể loại: Hoạt hình, Hài hước, Phiêu lưu</p>
+                    <a href="https://www.youtube.com/watch?v=SFbwRmsDxdU&t=375s" class="nut-xem">Xem Phim</a>
+                </div>
+            </div>
+
+            <!-- Phim 3 -->
+            <div class="the-phim" data-nam="2022">
+                <img src="3.jpg" alt="Minions 3" class="anh-phim">
+                <div class="thong-tin-phim">
+                    <h3 class="ten-phim">Minions 3 (2025)</h3>
+                    <p class="nam-phim">Năm: 2025</p>
+                    <p class="thoi-luong">Thời lượng: 87 phút</p>
+                    <p class="the-loai">Thể loại: Hoạt hình, Hài hước, Phiêu lưu</p>
+                    <a href="https://www.youtube.com/watch?v=SFbwRmsDxdU&t=375s" class="nut-xem">Xem Phim</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Phần chân trang -->
+    <footer class="chan-trang">
+        <p>&copy; 2025 Phim Minions. Tất cả quyền được bảo lưu.</p>
+        <p>Website được tạo ra cho mục đích học tập và kiểm thử phần mềm.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

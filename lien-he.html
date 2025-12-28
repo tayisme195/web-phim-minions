@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - TâyismeFilm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header - Phần đầu trang -->
+    <div class="phan-dau">
+        <div class="logo">
+            <h1>🎬 Tâyisme.Film</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="phim.html">Danh Sách Phim</a></li>
+                <li><a href="lien-he.html">Liên Hệ</a></li>
+                <div id="user-info" class="user-nav">
+    <a href="dang-nhap.html">Đăng nhập</a> | <a href="dang-ky.html">Đăng ký</a>
+</div>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Trang Liên Hệ -->
+    <section class="trang-lien-he">
+        <h2 class="tieu-de">Liên Hệ Với Chúng Tôi</h2>
+        
+        <div class="noi-dung-lien-he">
+            <div class="thong-tin-lien-he">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><strong>Email:</strong> hoaitay19052005@gmail.com</p>
+                <p><strong>Điện thoại:</strong> 0343553674</p>
+                <p><strong>Địa chỉ:</strong> Phú Bình, Thái Nguyên</p>
+            </div>
+
+            <div class="form-lien-he">
+                <h3>Gửi Tin Nhắn</h3>
+                <form id="form-lien-he" onsubmit="guiTinNhan(event)">
+                    <div class="nhom-nhap">
+                        <label for="ho-ten">Họ và tên:</label>
+                        <input type="text" id="ho-ten" name="ho-ten" required placeholder="Nhập họ tên của bạn">
+                    </div>
+
+                    <div class="nhom-nhap">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Nhập email của bạn">
+                    </div>
+
+                    <div class="nhom-nhap">
+                        <label for="so-dien-thoai">Số điện thoại:</label>
+                        <input type="tel" id="so-dien-thoai" name="so-dien-thoai" placeholder="Nhập số điện thoại">
+                    </div>
+
+                    <div class="nhom-nhap">
+                        <label for="noi-dung">Nội dung:</label>
+                        <textarea id="noi-dung" name="noi-dung" rows="5" required placeholder="Nhập nội dung tin nhắn..."></textarea>
+                    </div>
+
+                    <div class="nhom-nhap">
+                        <label for="danh-gia">Đánh giá website:</label>
+                        <select id="danh-gia" name="danh-gia">
+                            <option value="">-- Chọn đánh giá --</option>
+                            <option value="rat-tot">Rất tốt</option>
+                            <option value="tot">Tốt</option>
+                            <option value="binh-thuong">Bình thường</option>
+                            <option value="kem">Kém</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="nut-gui">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Phần chân trang -->
+    <footer class="chan-trang">
+        <p>&copy; 2025 Phim Minions. Tất cả quyền được bảo lưu.</p>
+        <p>Website được tạo ra cho mục đích học tập và kiểm thử phần mềm.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
