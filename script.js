@@ -131,7 +131,7 @@ async function xuLyDangKy(event) {
     console.log("Đang gửi dữ liệu đăng ký:", { taiKhoan, matKhau, email });
 
     try {
-        const res = await fetch('http://127.0.0.1:5000/api/dang-ky', {
+        const res = await fetch('https://web-phim-minions.onrender.com/api/dang-ky'', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -213,4 +213,5 @@ window.onload = function () {
     } catch (error) {
         console.log("Tính năng Google Login đang tạm dừng để fix lỗi.");
     }
+
 };
