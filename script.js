@@ -94,7 +94,7 @@ async function xuLyDangNhap(event) {
 
     try {
         // Tìm hàm xuLyDangNhap và sửa dòng fetch
-const res = await fetch('http://127.0.0.1:5000/api/dang-nhap', {
+const res = await fetch('https://web-phim-minions.onrender.com/api/dang-nhap', {
     method: 'POST', // Giữ nguyên POST
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username: taiKhoan, password: matKhau })
@@ -144,8 +144,9 @@ async function xuLyDangKy(event) {
         const data = await res.json();
 
         if (res.ok) {
-            alert('Đăng ký thành công!');
-            window.location.href = 'dang-nhap.html'; // Chuyển sang trang đăng nhập
+    alert('Đăng ký thành công!');
+    // Thêm dòng dưới đây để tự chuyển về trang đăng nhập
+    window.location.href = 'dang-nhap.html'; 
         } else {
             alert("Lỗi: " + data.error);
         }
@@ -215,4 +216,5 @@ window.onload = function () {
     }
 
 };
+
 
