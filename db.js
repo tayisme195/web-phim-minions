@@ -1,14 +1,14 @@
 const mysql = require('mysql2');
 
-// Sử dụng Connection Pool để tránh lỗi "Connection is in closed state"
+// Sử dụng Connection Pool để duy trì kết nối ổn định
 const db = mysql.createPool({
-    host: 'mysql-25be5d67-tayhao2009-db97.l.aivencloud.com', //
+    host: 'mysql-25be5d67-webphim.i.aivencloud.com', // Đã sửa theo ảnh mới nhất
     user: 'avnadmin', 
-    password: 'AVNS_spBVMa1m1lQZ1bLlWqf', // Mật khẩu bạn vừa cung cấp
+    password: 'AVNS_spBVMa1m1lQZ1bLlWqf', 
     database: 'defaultdb',
-    port: 11218, // Cổng chính xác từ ảnh Aiven của bạn
+    port: 13572, // Đã sửa theo ảnh mới nhất của bạn
     ssl: {
-        rejectUnauthorized: false // Bắt buộc để kết nối từ Render
+        rejectUnauthorized: false
     },
     waitForConnections: true,
     connectionLimit: 10,
@@ -18,9 +18,9 @@ const db = mysql.createPool({
 // Kiểm tra kết nối
 db.getConnection((err, connection) => {
     if (err) {
-        console.error('❌ Lỗi kết nối Database Aiven:', err.message);
+        console.error('❌ Lỗi kết nối Database:', err.message);
     } else {
-        console.log('✅ Đã kết nối Database Aiven thành công!');
+        console.log('✅ Đã kết nối thành công tới Aiven!');
         connection.release();
     }
 });
