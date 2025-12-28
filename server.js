@@ -62,8 +62,9 @@ app.post('/api/dang-ky', (req, res) => {
     });
 });
 
-const PORT = process.env.PORT || 5000;
+// Thay đổi đoạn app.listen cũ thành đoạn này
+const PORT = process.env.PORT || 10000; // Render thường dùng cổng 10000 hoặc tự động cấp
 app.listen(PORT, () => {
-    console.log(`🚀 Server đang chạy tại cổng ${PORT}`);
+    console.log(`🚀 Server đang chạy thành công tại cổng ${PORT}`);
 });
 
