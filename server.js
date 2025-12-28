@@ -3,6 +3,7 @@ const cors = require('cors');
 const db = require('./db'); // Kết nối tới file db.js vừa tạo
 
 const app = express();
+app.use(express.static(__dirname));
 app.use(express.json()); // Để server hiểu được dữ liệu bạn gửi từ Web
 app.use(cors());         // Cho phép giao diện web gọi vào server này
 
@@ -65,4 +66,5 @@ const PORT = 5000;
 // Thêm '0.0.0.0' để server chấp nhận mọi kết nối từ localhost và 127.0.0.1
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`🚀 Server đang chạy tại cổng ${PORT}`);
+
 });
